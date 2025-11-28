@@ -1,10 +1,5 @@
 pipeline{
     agent any
-    stages{
-        stage('Checkout'){
-            steps{
-               git branch: 'main', url: 'https://github.com/melinnehay/webbapp'
-            }
         }
         stage('Melinne_Hay Build Docker Image'){
             steps{
