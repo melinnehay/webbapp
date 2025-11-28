@@ -1,14 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Melinne_Hay Build Docker Image') {
+        stage('Melinne_Hay - Build Docker Image') {
             steps {
                 script {
                     sh 'docker build -t melinnehay/melinnehay:v1 .'
                 }
             }
         }
-        stage('Melinne_Hay Login Docker Hub') {
+        stage('Melinne Hay - Login Docker Hub') {
             steps {
                 script {
                     withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
@@ -17,7 +17,7 @@ pipeline {
                 }
             }
         }
-        stage('Melinne_Hay Push Docker Image') {
+        stage('Melinne Hay - Push Docker Image') {
             steps {
                 script {
                     sh 'docker push melinnehay/melinnehay:v1'
