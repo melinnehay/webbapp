@@ -9,7 +9,7 @@ pipeline{
         stage('Melinne_Hay Build Docker Image'){
             steps{
                 script{
-                    sh 'docker build -t melinnehay/webapp:v1 .'
+                    sh 'docker build -t melinnehay/melinnehay:v1 .'
                 }
             }
         }
@@ -25,7 +25,7 @@ pipeline{
         stage('Melinne_Hay Push Docker Image'){
             steps{
                 script{
-                    sh 'docker push melinnehay/webapp:v1'
+                    sh 'docker push melinnehay/melinnehay:v1'
                 }
             }
         }
